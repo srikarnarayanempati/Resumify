@@ -1,0 +1,21 @@
+# **App Name**: Resumify
+
+## Core Features:
+
+- Secure Resume Upload & Preprocessing: Users can upload resumes in PDF or DOCX format via a drag & drop interface or manual selection. The system includes frontend validation for file types and size, displays upload progress, and allows deleting uploaded files. The backend uses Multer for temporary storage, pdf-parse or mammoth for text extraction, and automatically cleans text, detects sections, extracts skills, and deletes files after analysis.
+- AI-Powered Resume Analysis Engine: A dedicated AI service module utilizing the OpenAI API (gpt-4o-mini) acts as an ATS, HR recruiter, and resume reviewer tool. It analyzes various aspects including ATS score, formatting quality, keyword optimization, technical skill coverage, resume clarity, experience quality, missing industry keywords, grammar issues, and overall resume impact, providing output in a strict JSON format.
+- Interactive Analysis Dashboard: Displays the comprehensive AI analysis results in a professional and clear format. This includes the ATS score via a circular progress UI, a summary, categorized strengths, weaknesses, missing skills, grammar improvements, ATS optimization suggestions, job match suggestions, and detected resume sections. Visual elements like skill tags and expandable suggestion cards enhance readability.
+- Dynamic & Modern User Interface: A responsive landing page featuring 'Resumify' branding and a description on the left, and an interactive resume upload card on the right. The UI adheres to modern clean design principles, incorporating glassmorphism effects, soft shadows, rounded corners, a gradient background, and mobile responsiveness for a premium, recruiter-grade feel.
+- Robust API Endpoints & Error Handling: Implements core API routes including POST /api/upload for handling resume uploads, text extraction, and AI analysis, returning a structured JSON response. A GET /api/health endpoint provides system status. The backend is designed with comprehensive error handling for invalid file types, empty resumes, API failures, rate limits, and parsing issues, providing appropriate status codes and user-friendly messages.
+- Dynamic Loading States & Animations: Enhances user experience with smooth loading animations during file uploads and AI analysis. Includes a clear upload progress bar, success states with a green tick icon, and skeleton loaders to provide visual feedback while content is being processed and analysis results are fetched.
+- Modular Backend Service Architecture: Organizes the backend with a clear folder structure including routes, controllers, services, utils, and middleware. This ensures a modular, scalable, and maintainable architecture for handling file operations, AI integrations, and API request processing.
+
+## Style Guidelines:
+
+- Background color: A very dark, cool gray (#15171A), chosen for a premium and professional feel, providing a strong contrast for UI elements.
+- Primary color: A sophisticated, medium-dark blue (#4672CC) used for interactive elements, buttons, and primary highlights, suggesting clarity and professionalism.
+- Accent color: A vibrant aqua (#73D4E6) that stands out against the dark background, used for attention-grabbing elements, alerts, or specific data visualizations.
+- General text (body and headlines): 'Inter' (sans-serif) for its modern, neutral, and highly readable qualities, fitting a professional ATS dashboard feel. Note: A brush-style font should be used for the main 'Resumify' title as requested.
+- Modern and clean icons should be used throughout, with a distinct green tick icon for successful uploads. Icons should support the professional ATS dashboard aesthetic, focusing on clarity and utility.
+- The layout features a modern, clean UI with glassmorphism elements, soft shadows, and rounded corners, creating depth and a premium feel. It adheres to a dual-pane landing page structure (branding/description on left, upload on right) and ensures full mobile responsiveness.
+- Smooth, subtle animations will be employed for transitions between UI states, showing progress during file uploads, and content loading (e.g., skeleton loaders), contributing to a polished user experience.
